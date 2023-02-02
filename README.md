@@ -1,5 +1,6 @@
 # ita-button
-![SPID](static/spid.png) ![CIE](static/cie.png) ![eIDAS](static/eidas.png) ![IDEM](static/idem.png)
+![SPID CIE eIDAS IDEM](static/ita-buttons.png)
+
 Il progetto nasce dall'esigenza di poter utilizzare i bottoni per le autenticazioni SPID / CIE / eIDAS / IDEM ed eduGAIN con siti "non bootstrap 4' senza reinventare la ruota.
 Il progetto non è AGID e non sostituisce il suo bottone ufficiale SPID, il progetto si prefige soltanto di provare ad ottenere un risultato simile con un codice più semplice e generico.
 
@@ -23,10 +24,10 @@ Il progetto non è AGID e non sostituisce il suo bottone ufficiale SPID, il prog
 * Sviluppare con usabilità ed accessibilità in testa.
 
 ## Pagine di esempio
-* **src/index.html** tutte le varianti di bottoni senza alcun framework css
-* **src/index-bootstrap.html** Pagina di esempio con Bootstrap 5
-* **src/index-bulma.html** Pagina di esempio con Bulma
-* **src/index-tailwind.html** Pagina di esempio con tailwind
+* [src/index.html](src/index.html) tutte le varianti di bottoni senza alcun framework css
+* [src/index-bootstrap.html](src/index-bootstrap.html) Pagina di esempio con Bootstrap 5
+* [src/index-bulma.html](src/index-bulma.html) Pagina di esempio con Bulma
+* [src/index-tailwind.html](src/index-tailwind.html) Pagina di esempio con tailwind
 
 ## Struttura dei bottoni
 Ogni bottone è composto da una classe contenitore principale `ita` con all'interno un elemento `ita-button` che contiene l'immagine ed il testo del bottone.
