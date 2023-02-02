@@ -24,6 +24,21 @@ Per manenere un adeguato standard di accessibilità è importante aggiungere la 
 Per mantenere il risultato omogeneo allo standard SPID, si deve utilizzare `Entra con SPID` come testo del link.
 
 Per produrre un dropdown simile a quello di [spid-sp-access-button](https://github.com/italia/spid-sp-access-button) è necessario inserire unicamente tag `a` contenenti immagini o test nel div `.ita-menu`
+## Apertura del dropdown tramite CSS (:hover)
+Per far aprire il dropdown al passaggio del mouse sopra il bottone è necessario aggiungere la classe `ita-hover` al contenitore principale:
+```html
+<div class='ita ita-dropdown ita-hover'>
+  <button class="ita-button">
+    <img src="img/spid.svg" alt="SPID logo">
+    Entra con SPID
+  </button>
+  <div class='ita-menu' role='menu'>
+    <a href="#"><img src="src/img/spid-idp-posteid.svg" alt="Poste Italiane SpA"></a>
+    ...
+    <a href="https://www.spid.gov.it/serve-aiuto">Serve aiuto?</a>
+  </div>
+</div>
+```
 
 ## Apertura del dropdown tramite JS
 Per aprire il dropdown via js è necessario aggiungere la classe `ita-active` nel contenitore principale.
