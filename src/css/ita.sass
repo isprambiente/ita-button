@@ -1,0 +1,109 @@
+.ita
+  // Configuration
+  $ita-bg: #06c
+  $light: #F0F0F0
+  $gray: #dedede
+  $radius: 0.375rem
+  $margin: 0.5rem
+
+  // Color modifiers
+  // do stuff
+  // example:
+  // $colors: (orange: #d77e29, black: #000)
+  $colors: ()
+    
+
+  @mixin color-modifiers
+    @each $name, $hex in $colors
+      &-#{$name}
+        background: $hex
+
+  &.ita-bg
+    @include color-modifiers
+  
+  font-size: 1rem
+  display: inline-block
+
+  &.ita-l
+    font-size: 1.5rem
+  &.ita-xl
+    font-size: 2rem
+  &.ita-xxl
+    font-size: 2.5rem
+  &.ita-xxxl
+    font-size: 3rem
+  &.ita-ma
+    margin: $margin
+  &.ita-mb
+    margin-bottom: $margin
+  &.ita-mt
+    margin-top: $margin
+  &.ita-fixed .ita-button
+    width: 10.3em
+  &.ita-hover:hover .ita-menu, &.ita-hover .ita-menu:hover
+    display: block
+
+  .ita-button
+    display: inline-block
+    box-sizing: content-box
+    padding: 0em 0.75rem 0em 0.25em
+
+    border: none
+    border-radius: $radius
+
+    background-color: $ita-bg
+    cursor: pointer
+    
+    font-family: "Titillium Web", HelveticaNeue, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif
+    color: #fff
+    line-height: 2.5em
+    font-size: inherit
+    text-decoration: none
+ 
+    &:hover
+      background: darken($ita-bg, 5%)
+      
+    img
+      float: left
+      padding: 0.25em 0.25em 0.25em 0em
+      margin-right: 0.25em
+      height: 2.25em
+      border-right: rgba(255, 255, 255, 0.1) 0.1em solid
+
+  .ita-menu
+    box-sizing: content-box
+    display: none
+    min-width: 12rem
+    position: absolute
+    z-index: 20
+    background: #fff
+    border: 1px solid $gray
+    border-radius: $radius
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    a
+      display: block
+      padding: 1rem
+      font-size: 1rem
+      border-bottom: 1px solid $gray
+      &:hover
+        background: $light
+      img
+        height: 2rem
+        
+    &:last-child
+      border-bottom: none
+
+  &.ita-dropdown 
+    .ita-button::after
+      display: inline-block
+      margin-left: 0.255em
+      vertical-align: 0.255em
+      content: ""
+      border-top: 0.3em solid
+      border-right: 0.3em solid transparent
+      border-bottom: 0
+      border-left: 0.3em solid transparent
+    
+    &.ita-active .ita-menu
+      display: block

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulma CSS Navbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Titillium+Web">
+    <link rel="stylesheet" href="css/ita.css" />
+    <script src="js/ita.js"></script>
+    <script src="js/spid-idps.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+
+          <a class="navbar-item">
+            Documentation
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class='container'>
+      <section class="hero is-primary">
+	<div class="hero-body">
+	  <p class="title">Autenticazione!</p>
+	  <p class="subtitle">
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus vulputate sem accumsan interdum. Aenean at malesuada massa. Phasellus nec justo tempor, euismod nulla eu, pharetra purus. Nullam euismod lacus pharetra leo dictum, nec maximus odio rutrum.<br/><br/>
+	    <a class='button is-info'>Learn more</a>
+	  </p>
+	</div>
+      </section>
+      <br/>
+      <div class='columns'>
+	<div class='column'>
+	  <div class='box content'>
+            <h3 class='is-size-3'>SPID</h3>
+	    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	    <div class='ita ita-dropdown ita-fixed'>
+	      <button class="ita-button">
+		<img src="img/spid.svg" alt="SPID logo">
+		Entra con SPID
+	     </button>
+	     <div class='ita-menu' role='menu' data-spid-remote>
+	       <a href="https://www.spid.gov.it">Maggiori informazioni</a>
+	       <a href="https://www.spid.gov.it/richiedi-spid">Non hai SPID?</a>
+	       <a href="https://www.spid.gov.it/serve-aiuto">Serve aiuto?</a>
+	     </div>
+	     </div>
+	  </div>
+	</div>
+	<div class='column'>
+	  <div class='box content'>
+	    <h3 class='is-size-3'>CIE</h3>
+	    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	    <div class='ita ita-fixed'>
+		<a class="ita-button" href="#">
+		  <img src="img/cie.svg" alt="CIE Logo">
+		  Entra con CIE
+	       </a>
+	      </div>
+
+	  </div>
+	</div>
+	<div class='column'>
+	  <div class='box content'>
+            <h3 class='is-size-3'>eIDAS</h3>
+	    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	    <div class='ita ita-fixed'>
+		<a class="ita-button" href="#">
+		  <img src="img/ficep.svg" alt="FICEP Logo">
+		  Entra con eIDAS
+	       </a>
+	      </div>
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+
+      });
+    </script>
+  </body>
+
+</html>
