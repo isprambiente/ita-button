@@ -30,7 +30,7 @@ class SpidIdps {
   // Try to get idps list and staty populate()
   async start() {
     try {
-      const response = await fetch(queryURL);
+      const response = await fetch(this.url);
       if (response.ok) { spid_populate(await response.json()) }
     } catch (error) {
       this.spid_populate(this.idps)
