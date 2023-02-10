@@ -2,6 +2,7 @@
 ![SPID CIE eIDAS IDEM](static/ita-buttons.png)
 
 Il progetto nasce dall'esigenza di poter utilizzare i bottoni per le autenticazioni SPID / CIE / eIDAS / IDEM ed eduGAIN con siti "non bootstrap 4' senza reinventare la ruota.
+
 Il progetto non è AGID e non sostituisce il suo bottone ufficiale SPID, il progetto si prefige soltanto di provare ad ottenere un risultato simile con un codice più semplice e generico.
 
 ## Obiettivi
