@@ -57,11 +57,5 @@ class SpidIdps {
   }
 }
 
-// when page is ready populate all spid buttons
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
-    //getIDPS();
-    spid_idps = new SpidIdps
-  }
-}
-
+//function spid_idps(options = {}) { new SpidIdps(options)}
+//export (spid_idps);

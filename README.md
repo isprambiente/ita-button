@@ -8,10 +8,9 @@ Il progetto non è AGID e non sostituisce il suo bottone ufficiale SPID, il prog
 ## Obiettivi
 * creare un set di bottoni indipendente da ogni framework css
 * creare uno standard unico compatibile con i vari bottoni (SPID / CIE / ecc.)
-* supportare un dropdown js che non richieda jquery
-* supportare un dropdown che non richieda js (hover)
+* non richiedere js per il funzionamento del bottone
 * supportare l'inserimento statico delle voci di dropdown (idps SPID)
-* supportare l'inserimento dinamico delle voci di dropdown (idps SPID circ. 41)
+* supportare l'inserimento dinamico delle voci di dropdown via js (idps SPID circ. 41)
 * creare un css il più  piccolo possibile
 * mantenere un elevato livello di coerenza indipendentemente dal framesowrk css utilizzato
 
@@ -55,15 +54,9 @@ Il contenitore principale può opzionalmente avere al suo interno un elemento `i
       </div>
     </div>
 ```
-L'elemento `ita-menu` è per definizione nascosto (`display: hidden`). E` possibile renderlo visibile aggiungendo la classe `ita-active` alla classe contenitore.
+L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe stessa non sono in focus o il contenitore non è in hover. E` possibile forzare la visibilità aggiungendo la classe `ita-active` alla classe contenitore.
 ```html
 <div class='ita ita-dropdown ita-active'>...</div>
-```
-Nel file [ita.js](src/js/ita.js) è disponibile una funzione per aggiungere / rimuovere la classe `ita-active` cliccando sul bottone.
-In alternativa è possibile utilizzare la classe opzionale `ita-hover` per rendere visibile il dropdown senza javascript ma passando sopra il bottone.
-```html
-<div class='ita ita-dropdown ita-hover'>...</div>
-
 ```
 
 ### Classi opzionali

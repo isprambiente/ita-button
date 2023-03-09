@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Titillium+Web">
     <link rel="stylesheet" href="css/ita.css" />
-    <script src="js/ita.js"></script>
     <script src="js/spid-idps.js"></script>
   </head>
   <body>
@@ -63,17 +62,6 @@
 	<img src="img/idem.svg" alt="IDEM Logo">
 	Entra con IDEM
       </a>
-    </div>
-
-
-    <h2>Hoverable (no js required) class='ita ita-hover'</h2>
-    <div class='ita ita-dropdown ita-hover'>
-      <button class="ita-button">
-	<img src="img/spid.svg" alt="SPID logo">
-	Entra con SPID
-      </button>
-      <div class='ita-menu' role='menu' data-spid-remote>
-      </div>
     </div>
 
     <h2>Large 1.5rem class='ita ita-l'</h2>
@@ -145,5 +133,8 @@
       <div class='ita-menu' role='menu' data-spid-remote>
       </div>
     </div>
+    <script>
+      var spid_idps = new SpidIdps
+    </script>
   </body>
 </html>
