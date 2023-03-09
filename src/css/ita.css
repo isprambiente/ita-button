@@ -17,7 +17,7 @@
     margin-top: 0.5rem; }
   .ita.ita-fixed .ita-button {
     width: 10.3em; }
-  .ita .ita-menu:hover, .ita:focus .ita-menu, .ita .ita-menu:focus, .ita:has( > .ita-button:focus) .ita-menu, .ita .ita-menu:has( > a:focus), .ita .ita-menu:has( > a:hover), .ita:has( > .ita-menu a:focus) .ita-menu {
+  .ita:focus-within .ita-menu, .ita .ita-menu:hover {
     display: block; }
   .ita .ita-button {
     display: inline-block;
