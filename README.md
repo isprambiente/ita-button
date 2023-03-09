@@ -54,7 +54,7 @@ Il contenitore principale può opzionalmente avere al suo interno un elemento `i
       </div>
     </div>
 ```
-L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe stessa non sono in focus o il contenitore non è in hover. E` possibile forzare la visibilità aggiungendo la classe `ita-active` alla classe contenitore.
+L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe stessa non sono in focus o il contenitore non è in hover. E' possibile forzare la visibilità aggiungendo la classe `ita-active` alla classe contenitore.
 ```html
 <div class='ita ita-dropdown ita-active'>...</div>
 ```
