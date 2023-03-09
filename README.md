@@ -81,5 +81,19 @@ Il repository contiene una versione modificata del file [spid-idps.js](https://g
 * [spid-idps.js sorgente](src/js/spid-idps.js)
 * [spid-idps.js istruzioni e configurazione](./spid-idps.md)
 
+## Personalizzazione SASS ##
+Tramite il file [ita.sass](src/css/ita.sass) è possibile creare nuove varianti di colore dei bottoni popolando la variabile  $colors.
+
+Per esempio popolando la cariabile con i seguenti valori si creeranno le classi `ita-orange` e `ita-black` con i colori memorizzati
+```
+$colors: (orange: #d77e29, black: #000)
+```
+Altre variabili configurabili sono:
+* $ita-bg: Background di default 
+* $light: background hover
+* $gray: Grigio utilizzato per i bordi
+* $radius: radius bordi dei bottoni
+* $margin: Margine di default
+
 ## Crediti
 * il sistema di importazione degli IDPS è ripreso dal progetto [Satosa-Saml2SPID](https://github.com/italia/Satosa-Saml2Spid/) ed è aggiornato con il nuovo sistema definito da [spid-sp-button](https://github.com/italia/spid-sp-access-button) in [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js)
