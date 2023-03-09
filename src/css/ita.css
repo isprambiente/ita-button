@@ -52,13 +52,12 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
     .ita .ita-menu a {
       display: block;
-      padding: 1rem;
-      font-size: 1rem;
+      padding: 0.5em;
       border-bottom: 1px solid #dedede; }
       .ita .ita-menu a:hover {
         background: #F0F0F0; }
       .ita .ita-menu a img {
-        height: 2rem; }
+        height: 1.5em; }
     .ita .ita-menu:last-child {
       border-bottom: none; }
   .ita.ita-dropdown .ita-button::after {
