@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Titillium+Web">
     <link rel="stylesheet" href="css/ita.css" />
-    <script src="js/ita.js"></script>
     <script src="js/spid-idps.js"></script>
   </head>
   <body>
@@ -68,11 +67,7 @@
 		  <img src="img/spid.svg" alt="SPID logo">
 		  Entra con SPID
 	       </button>
-	       <div class='ita-menu' role='menu' data-spid-remote>
-		 <a href="https://www.spid.gov.it">Maggiori informazioni</a>
-		 <a href="https://www.spid.gov.it/richiedi-spid">Non hai SPID?</a>
-		 <a href="https://www.spid.gov.it/serve-aiuto">Serve aiuto?</a>
-	       </div>
+	       <div class='ita-menu' role='menu' data-spid-remote></div>
 	     </div>
 	    </p>
           </div>
@@ -111,6 +106,7 @@
     <footer class="container">
       <p>&copy; Company 2017-2018</p>
     </footer>
-      
+     <script>var spid_idps = new SpidIdps</script>
+     
   </body>
 </html>

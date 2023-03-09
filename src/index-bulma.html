@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Titillium+Web">
     <link rel="stylesheet" href="css/ita.css" />
-    <script src="js/ita.js"></script>
     <script src="js/spid-idps.js"></script>
   </head>
 
@@ -97,11 +96,7 @@
 		<img src="img/spid.svg" alt="SPID logo">
 		Entra con SPID
 	     </button>
-	     <div class='ita-menu' role='menu' data-spid-remote>
-	       <a href="https://www.spid.gov.it">Maggiori informazioni</a>
-	       <a href="https://www.spid.gov.it/richiedi-spid">Non hai SPID?</a>
-	       <a href="https://www.spid.gov.it/serve-aiuto">Serve aiuto?</a>
-	     </div>
+	     <div class='ita-menu' role='menu' data-spid-remote></div>
 	     </div>
 	  </div>
 	</div>
@@ -155,7 +150,9 @@
         });
 
       });
+      var spid_idps = new SpidIdps
     </script>
+
   </body>
 
 </html>
