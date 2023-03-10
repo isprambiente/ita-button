@@ -31,8 +31,9 @@ class SpidIdps {
   async start() {
     try {
       const response = await fetch(this.url);
-      if (response.ok) { spid_populate(await response.json()) }
+      if (response.ok) { this.spid_populate(await response.json()) }
     } catch (error) {
+      console.log(error)
       this.spid_populate(this.idps)
     }
   }
