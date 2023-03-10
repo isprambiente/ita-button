@@ -81,6 +81,27 @@ Il repository contiene una versione modificata del file [spid-idps.js](https://g
 * [spid-idps.js sorgente](src/js/spid-idps.js)
 * [spid-idps.js istruzioni e configurazione](./spid-idps.md)
 
+## CSS e font ##
+Tutte le definizione dei bottoni sono inserite nel file [ita.sass](src/css/ita.css) generato dal file [ita.sass](src/css/ita.sass). E' possibile caricari il css nel proprio sito aggiungendo il seguente tag all'interno dell'header della  pagina:
+```
+<head>
+  ...
+  <link rel="stylesheet" href="css/ita.css" />
+</head>
+```
+
+Il  font Titilium Web è il font tipografico istituzionale per l'italia, in ita-button è considerata una dipendenza esterna non obbligatori (non è richiamato dal css) in quanto non sussiste obbligo d'uso.
+I bottoni in sequenza utilizzano i seguenti font family in sequenza: "Titillium Web", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "sans-serif". E' comunque possibile personalizzare i font dei bottoni modificando la variabile $fonts in [ita.sass](src/css/ita.sass).
+
+Nella directory css è disponibile il file aggiuntivo [font.css](src/font.css) che permette di caricare il font [Titilium Web regular](src/css/titillium-web-v4-latin-regular.woff2) disponibile sempre nella directory [src/css](src/css). Per caricare il font aggiungere il seguente codince nell'head della pagina
+
+```
+<head>
+  ...
+  <link rel="stylesheet" href="css/font.css" />
+</head>
+```
+
 ## Personalizzazione SASS ##
 Tramite il file [ita.sass](src/css/ita.sass) è possibile creare nuove varianti di colore dei bottoni popolando la variabile  $colors.
 
@@ -94,6 +115,7 @@ Altre variabili configurabili sono:
 * $gray: Grigio utilizzato per i bordi
 * $radius: radius bordi dei bottoni
 * $margin: Margine di default
+* $fonts: font per i bottoni
 
 ## Crediti
 * il sistema di importazione degli IDPS è ripreso dal progetto [Satosa-Saml2SPID](https://github.com/italia/Satosa-Saml2Spid/) ed è aggiornato con il nuovo sistema definito da [spid-sp-button](https://github.com/italia/spid-sp-access-button) in [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js)
