@@ -1,0 +1,25 @@
+{
+  "name": "ita-button",
+  "version": "0.0.1",
+  "description": "ita-button support for AGID dynamic SPID idps (circ. 41)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isprambiente/ita-button.git"
+  },
+  "author": "MdreW (Andrea Ranaldi)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isprambiente/ita-button/issues"
+  },
+  "homepage": "https://github.com/isprambiente/ita-button#readme",
+  "directories": {
+    "example": "example"
+  },
+  "keywords": [
+    "spid"
+  ]
+}
