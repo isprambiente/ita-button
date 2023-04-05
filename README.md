@@ -78,8 +78,8 @@ L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe 
 
 ### Informazioni per il caricamento remoto degli idp 
 Il repository contiene [ita.js](src/js/ita.js) una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) di [spid-sp-button](https://github.com/italia/spid-sp-access-button). Lo script è stato adattato alla struttura di questa versione dei bottoni, è stato rinchiuso in un modulo importabile ed è stato reso completamente configurabile.
-* [spid-idps.js sorgente](src/js/ita.js)
-* [spid-idps.js istruzioni e configurazione](./ita-js.md)
+* [ita.js sorgente](src/js/ita.js)
+* [ita.js istruzioni e configurazione](./ita-js.md)
 
 E' presente anche la prima versione del js inclusa in una classe invece che di un modulo
 * [spid-idps.js sorgente](src/js/ita.js)
