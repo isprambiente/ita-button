@@ -1,4 +1,4 @@
-function SpidIDP(opt) { 
+function Ita(opt) { 
   var default_values = {
   addition: '<a href="https://www.spid.gov.it">Maggiori informazioni</a><a href="https://www.spid.gov.it/richiedi-spid">Non hai SPID?</a><a href="https://www.spid.gov.it/serve-aiuto">Serve aiuto?</a>',
   href: function (data,params) {return `${params.get("return")}?entityID=${data["entity_id"]}&return=${params.get("return")}`},
@@ -45,4 +45,4 @@ function SpidIDP(opt) {
   }
 }
 
-module.exports = { SpidIDP }
+module.exports = { Ita }
