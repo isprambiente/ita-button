@@ -77,8 +77,12 @@ L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe 
 * [SPID](./spid.md)
 
 ### Informazioni per il caricamento remoto degli idp 
-Il repository contiene una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) di [spid-sp-button](https://github.com/italia/spid-sp-access-button). Lo script è stato adattato alla struttura di questa versione dei bottoni ed è stato tentato di renderlo leggermente più configurabile.
-* [spid-idps.js sorgente](src/js/spid-idps.js)
+Il repository contiene [ita.js](src/js/ita.js) una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) di [spid-sp-button](https://github.com/italia/spid-sp-access-button). Lo script è stato adattato alla struttura di questa versione dei bottoni, è stato rinchiuso in un modulo importabile ed è stato reso completamente configurabile.
+* [spid-idps.js sorgente](src/js/ita.js)
+* [spid-idps.js istruzioni e configurazione](./ita-js.md)
+
+E' presente anche la prima versione del js inclusa in una classe invece che di un modulo
+* [spid-idps.js sorgente](src/js/ita.js)
 * [spid-idps.js istruzioni e configurazione](./spid-idps.md)
 
 ## CSS e font ##
@@ -93,7 +97,7 @@ Tutte le definizione dei bottoni sono inserite nel file [ita.sass](src/css/ita.c
 Il  font Titilium Web è il font tipografico istituzionale per l'italia, in ita-button è considerata una dipendenza esterna non obbligatori (non è richiamato dal css) in quanto non sussiste obbligo d'uso.
 I bottoni in sequenza utilizzano i seguenti font family in sequenza: "Titillium Web", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "sans-serif". E' comunque possibile personalizzare i font dei bottoni modificando la variabile $fonts in [ita.sass](src/css/ita.sass).
 
-Nella directory css è disponibile il file aggiuntivo [font.css](src/font.css) che permette di caricare il font [Titilium Web regular](src/css/titillium-web-v4-latin-regular.woff2) disponibile sempre nella directory [src/css](src/css). Per caricare il font aggiungere il seguente codince nell'head della pagina
+Nella directory css è disponibile il file aggiuntivo [ita-font.css](src/css/ita-font.css) che permette di caricare il font [Titilium Web regular](src/css/titillium-web-v4-latin-regular.woff2) disponibile sempre nella directory [src/css](src/css). Per caricare il font aggiungere il seguente codince nell'head della pagina
 
 ```
 <head>
