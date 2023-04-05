@@ -2,7 +2,7 @@
   "name": "ita-button",
   "version": "0.0.1",
   "description": "ita-button support for AGID dynamic SPID idps (circ. 41)",
-  "main": "index.js",
+  "browser": "ita.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,6 @@
     "example": "example"
   },
   "keywords": [
-    "spid"
+    "spid,cie,ficep,eidas,"
   ]
 }
