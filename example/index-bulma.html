@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bulma CSS Navbar</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-    <link rel="stylesheet"  href="../src/css/font.css" />
-    <link rel="stylesheet" href="../src/css/ita.css" />
-    <script src="../src/js/spid-idps.js"></script>
+    <link rel="stylesheet" href="../dist/ita.min.css" />
+    <link rel="stylesheet" href="../dist/ita-font.min.css" />
+    <script src="../dist/ita.min.js"></script>
   </head>
 
   <body>
@@ -150,7 +150,7 @@
         });
 
       });
-      var spid_idps = new SpidIdps
+      var spid_idps = Ita(); spid_idps.start()
     </script>
 
   </body>

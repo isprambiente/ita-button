@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet"  href="../src/css/font.css" />
-  <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Titillium+Web">
-  <link rel="stylesheet" href="../src/css/ita.css" />
-  <script src="../src/js/spid-idps.js"></script>
+  <link rel="stylesheet"  href="../dist/ita.min.css" />
+  <link rel="stylesheet"  href="../dist/ita-font.min.css">
+  <script src="../dist/ita.min.js"></script>
 </head>
 <body>
 <div class="relative bg-white">
@@ -180,6 +179,6 @@
 	  Entra con IDEM
        </a>
       </div>
-    <script>var spid_idps = new SpidIdps</script>
+    <script>var spid_idps = Ita(); spid_idps.start()</script>
 </body>
 </html>
