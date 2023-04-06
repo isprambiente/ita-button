@@ -136,7 +136,7 @@ E' presente anche la prima versione del js inclusa in una classe invece che di u
 * [spid-idps.js istruzioni e configurazione](./spid-idps.md)
 
 ## CSS e font ##
-Tutte le definizione dei bottoni sono inserite nel file [ita.sass](src/css/ita.css) generato dal file [ita.sass](src/css/ita.sass). E' possibile caricari il css nel proprio sito aggiungendo il seguente tag all'interno dell'header della  pagina:
+Tutte le definizione dei bottoni sono inserite nel file [ita.min.css](dist/ita.min.css) generato dal file [ita.sass](src/css/ita.sass). E' possibile caricare il css nel proprio sito aggiungendo il seguente tag all'interno dell'header della  pagina:
 ```html
 <head>
   ...
