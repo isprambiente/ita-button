@@ -1,4 +1,4 @@
-### Copyright 2023 MDreW ###
+### Copyright 2023 Istituto Superiore per la Protezione e la Ricerca Ambientale ###
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -19,4 +19,4 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Titillium font in src/css/titillium-web-v4-latin-regular.woff2 and dist/titillium-web-v4-latin-regular.woff2 is fromi "Accademia di Belle Arti Urbino" with license SIL Open Font License 1.1
+Titillium font in src/css/titillium-web-v4-latin-regular.woff2 and dist/titillium-web-v4-latin-regular.woff2 is developed from "Accademia di Belle Arti Urbino" and distribuited with license "SIL Open Font License 1.1"

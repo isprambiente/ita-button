@@ -1,4 +1,4 @@
-# ita-button
+# [ita-button](https://github.com/isprambiente/ita-button)
 ![SPID CIE eIDAS IDEM](static/ita-buttons.png)
 
 Il progetto nasce dall'esigenza di poter utilizzare i bottoni per le autenticazioni SPID / CIE / eIDAS / IDEM ed eduGAIN con siti "non bootstrap 4' senza reinventare la ruota.
@@ -28,6 +28,56 @@ Il progetto non è AGID e non sostituisce il bottone ufficiale [spid-sp-access-b
 * [src/index-bootstrap.html](src/index-bootstrap.html) Pagina di esempio con Bootstrap 5
 * [src/index-bulma.html](src/index-bulma.html) Pagina di esempio con Bulma
 * [src/index-tailwind.html](src/index-tailwind.html) Pagina di esempio con tailwind
+
+
+## Utilizzare ITA Button
+Il progetto [ita-button](https://github.com/isprambiente/ita-button) si divide in due componenti:
+* un css disponibile in formato sass e minified.
+* un css per il caricamento del font [Titillium Web](https://it.wikipedia.org/wiki/Titillium). *opzionale*
+* un modulo javascript per il caricamento remoto degli idps spid disponibile in formato minified e come modulo. *opzionale*
+* [copia delle immagini](src/img) degli ipd spid e dei loghi SPID, CIE, eIDAS e IDEM per la composizione dei bottoni
+
+Di seguito sono riportate le istruzioni per alcune tipologie di di installazione.
+
+### Caricamento statico dei file minified
+Nella directory [dist](dist) del progetto sono archiviati i file minified dei css, del js e del font,
+Nella directory [src/img](src/img) sono disponibili i loghi dei bottoni e fegli idp utili alla composizione dei bottoni.
+
+all'interno dell'header della pagina web è necessario collegare il css printipale ed eventualmente il font Titillium Web e il js per il caricamento degli idp SPID.
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="../dist/ita.min.css" />
+    <link rel="stylesheet" href="../dist/ita-font.min.css" />
+    <script src="../dist/ita.min.js"></script>
+  </head>
+  ...
+```
+
+### installazione via npm o yarn, caricamento dei css via sass ed import del js
+[ita-button](https://github.com/isprambiente/ita-button) è disponibile anche come [modulo NPM](https://www.npmjs.com/package/ita-button/).
+Per installarlo tramite yard eseguire il comando `yarn add ita-button`, per installarlo tramite npm `npm install ita-button`.
+
+E' possibile includere includere gli stili in sass con il seguente codice:
+
+```sass
+// stile principale
+@import 'ita-button/ita' 
+// Font titilium aggiuntivo
+@import 'ita-button/src/css/ita-font'
+```
+
+E' possibile includere ed eseguire il modulo js con il seguente codice:
+```js
+import { Ita } from 'ita-button/ita'
+var ita = Ita()
+ita.start()
+```
+
+Maggiori dettagli sono disponibili nel documento di [ita.js](ita-js.md)
 
 ## Struttura dei bottoni
 Ogni bottone è composto da una classe contenitore principale `ita` con all'interno un elemento `ita-button` che contiene l'immagine ed il testo del bottone.
@@ -87,19 +137,19 @@ E' presente anche la prima versione del js inclusa in una classe invece che di u
 
 ## CSS e font ##
 Tutte le definizione dei bottoni sono inserite nel file [ita.sass](src/css/ita.css) generato dal file [ita.sass](src/css/ita.sass). E' possibile caricari il css nel proprio sito aggiungendo il seguente tag all'interno dell'header della  pagina:
-```
+```html
 <head>
   ...
   <link rel="stylesheet" href="css/ita.css" />
 </head>
 ```
 
-Il  font Titilium Web è il font tipografico istituzionale per l'italia, in ita-button è considerata una dipendenza esterna non obbligatori (non è richiamato dal css) in quanto non sussiste obbligo d'uso.
+Il  font Titilium Web è il font tipografico istituzionale per l'italia, in [ita-button](https://github.com/isprambiente/ita-button) è considerata una dipendenza esterna non obbligatori (non è richiamato dal css) in quanto non sussiste obbligo d'uso.
 I bottoni in sequenza utilizzano i seguenti font family in sequenza: "Titillium Web", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "sans-serif". E' comunque possibile personalizzare i font dei bottoni modificando la variabile $fonts in [ita.sass](src/css/ita.sass).
 
 Nella directory css è disponibile il file aggiuntivo [ita-font.css](src/css/ita-font.css) che permette di caricare il font [Titilium Web regular](src/css/titillium-web-v4-latin-regular.woff2) disponibile sempre nella directory [src/css](src/css). Per caricare il font aggiungere il seguente codince nell'head della pagina
 
-```
+```html
 <head>
   ...
   <link rel="stylesheet" href="css/font.css" />
@@ -110,7 +160,7 @@ Nella directory css è disponibile il file aggiuntivo [ita-font.css](src/css/ita
 Tramite il file [ita.sass](src/css/ita.sass) è possibile creare nuove varianti di colore dei bottoni popolando la variabile  $colors.
 
 Per esempio popolando la cariabile con i seguenti valori si creeranno le classi `ita-orange` e `ita-black` con i colori memorizzati
-```
+```sass
 $colors: (orange: #d77e29, black: #000)
 ```
 Altre variabili configurabili sono:
