@@ -1,6 +1,6 @@
 {
   "name": "ita-button",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ita-button support for AGID dynamic SPID idps (circ. 41)",
   "browser": "ita.js",
   "scripts": {
