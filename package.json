@@ -1,10 +1,22 @@
 {
   "name": "ita-button",
-  "version": "0.0.2",
-  "description": "ita-button support for AGID dynamic SPID idps (circ. 41)",
-  "browser": "ita.js",
+  "version": "1.0.0",
+  "description": "SPID, CIE, eIDAS, IDEM buttons with support for AGID dynamic SPID idps (circ. 41)",
+  "type": "module",
+  "module": "src/js/main.mjs",
+  "exports": {
+    ".": "./src/js/ita.mjs",
+    "./ita.mjs": "./src/js/ita.mjs",
+    "./sass/*": "./src/sass/*",
+    "./css/*": "./dist/*.css"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run-s test make-js make-font make-sass make-svg",
+    "test": "mocha",
+    "make-js": "sed 's/export default //g' src/js/ita.mjs > src/js/ita.js; esbuild src/js/ita.js --minify --outfile=dist/ita.min.js",
+    "make-font": "sass src/sass/ita-font.sass dist/ita-font.css && esbuild dist/ita-font.css --minify --outfile=dist/ita-font.min.css",
+    "make-sass": "sass src/sass/ita.sass dist/ita.css && esbuild dist/ita.css --minify --outfile=dist/ita.min.css",
+    "make-svg": "svgo -f ./src/img -o ./dist/img"
   },
   "repository": {
     "type": "git",
@@ -21,5 +33,16 @@
   },
   "keywords": [
     "spid,cie,ficep,eidas,"
-  ]
+  ],
+  "devDependencies": {
+    "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css --output-style compressed",
+    "chai": "^4.3.7",
+    "esbuild": "^0.17.15",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.62.0",
+    "svgo": "^3.0.2"
+  },
+  "dependencies": {}
 }

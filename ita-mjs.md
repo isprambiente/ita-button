@@ -1,7 +1,7 @@
 # ita.js
 Il progetto [ITA-Button](README.md) contiene una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) presente nel progetto [spid-sp-button](https://github.com/italia/spid-sp-access-button).
 
-La nuova versione è stata pensata per essere completamente configurabile ed importata sia staticamente che come modulo.
+La nuova versione è stata pensata per essere completamente configurabile ed importata sia staticamente che come modulo. Entrambe le soluzioni permettono di istanziare e configurare la classe Ita che si occuperrà di popolare i bottoni SPID come da circolare AGID.
 
 ## Importazione statica
 ```html
@@ -14,12 +14,13 @@ La nuova versione è stata pensata per essere completamente configurabile ed imp
   ...
 ```
 
-## Importazione della funzione Ita
+## Importazione ed inizializzazione della classe Ita
 ```js
-import { Ita } from 'ita-button/ita'
+import Ita from 'ita-button'
+var ita = new Ita
 ```
 
-## Parametri della funzione Ita
+## Parametri di inizializzazione della classe Ita
 I parametri di configurazione della funzione sono:
 * `addition`: STRING -
 html statico da aggiungere ad ogni menu, contieni i link statici alle pagine informative di spid.
@@ -28,6 +29,12 @@ html statico da aggiungere ad ogni menu, contieni i link statici alle pagine inf
 * * `params`: Params instance, parametri presenti nella pagina corrente
 * url: Indirizzo del json AGID con i dati aggiornati
 * idps: JSON - valori da utilizzare nel caso il json AGID non fosse raggiungibile
+
+Esempio: in questo caso configureremo un indirizzo differente per scaricare il json degli idp
+```js
+import Ita from 'ita-button'
+var ita = new Ita({url: 'https://test.it/idps.json'})
+```
 
 ## Parametri di default
 In assenza di nuovi valori vengono utilizzate le seguenti impostazioni:
@@ -46,15 +53,3 @@ In assenza di nuovi valori vengono utilizzate le seguenti impostazioni:
 * **href** - Function, generatore degli url per gli IDP
 * **idps** - Hash, valori per popolare l'elenco degli idp
 * **start** - Null, prova ad aggiornare l'elenco degli idp e popola i bottoni `.ita .ita-menu[data-spid-remote]`
-
-## Avvio con opzioni di default
-```js
-var spid_idps = Ita()
-spid_idps.start()
-```
-
-## Avvio con opzioni
-```js
-var spid_idps = Ita(url: 'https://127.0.0.1/list.json', addition: '<a href="/info">Informazioni</a>')
-spid_idps.start()
-```

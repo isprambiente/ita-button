@@ -40,8 +40,9 @@ Il progetto [ita-button](https://github.com/isprambiente/ita-button) si divide i
 Di seguito sono riportate le istruzioni per alcune tipologie di di installazione.
 
 ### Caricamento statico dei file minified
-Nella directory [dist](dist) del progetto sono archiviati i file minified dei css, del js e del font,
-Nella directory [src/img](src/img) sono disponibili i loghi dei bottoni e fegli idp utili alla composizione dei bottoni.
+Nella directory [dist](dist) sono archiviati i file minified dei css, del js e del font;
+Nella directory [dist/img](dist/img) sono archiviate le immaggini svg minified dei loghi
+Nella directory [src/img](src/img) sono disponibili i sorgenti originali dei loghi utili alla composizione dei bottoni.
 
 all'interno dell'header della pagina web è necessario collegare il css printipale ed eventualmente il font Titillium Web e il js per il caricamento degli idp SPID.
 
@@ -73,11 +74,10 @@ E' possibile includere includere gli stili in sass con il seguente codice:
 E' possibile includere ed eseguire il modulo js con il seguente codice:
 ```js
 import { Ita } from 'ita-button/ita'
-var ita = Ita()
-ita.start()
+var ita = new Ita
 ```
 
-Maggiori dettagli sono disponibili nel documento di [ita.js](ita-js.md)
+Maggiori dettagli sono disponibili nel documento di [ita.mjs](ita-mjs.md)
 
 ## Struttura dei bottoni
 Ogni bottone è composto da una classe contenitore principale `ita` con all'interno un elemento `ita-button` che contiene l'immagine ed il testo del bottone.
@@ -128,12 +128,8 @@ L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe 
 
 ### Informazioni per il caricamento remoto degli idp 
 Il repository contiene [ita.js](src/js/ita.js) una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) di [spid-sp-button](https://github.com/italia/spid-sp-access-button). Lo script è stato adattato alla struttura di questa versione dei bottoni, è stato rinchiuso in un modulo importabile ed è stato reso completamente configurabile.
-* [ita.js sorgente](src/js/ita.js)
-* [ita.js istruzioni e configurazione](./ita-js.md)
-
-E' presente anche la prima versione del js inclusa in una classe invece che di un modulo
-* [spid-idps.js sorgente](src/js/ita.js)
-* [spid-idps.js istruzioni e configurazione](./spid-idps.md)
+* [ita.mjs sorgente](src/js/ita.mjs)
+* [ita.mjs istruzioni e configurazione](./ita-mjs.md)
 
 ## CSS e font ##
 Tutte le definizione dei bottoni sono inserite nel file [ita.min.css](dist/ita.min.css) generato dal file [ita.sass](src/css/ita.sass). E' possibile caricare il css nel proprio sito aggiungendo il seguente tag all'interno dell'header della  pagina:

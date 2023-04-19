@@ -20,7 +20,7 @@ const ita_default = {
 // ## ita ##
 // This class search and populate all button with class '.ita .ita-menu[data-spid-remote]'
 // the class accept all spidIdpsDefault values as options
-class Ita {
+export default class Ita {
   constructor(options) {
     Object.assign(this, ita_default,  options);
     this.params = new URLSearchParams(window.location.search);
