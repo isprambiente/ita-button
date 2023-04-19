@@ -58,7 +58,7 @@ all'interno dell'header della pagina web è necessario collegare il css printipa
   ...
 ```
 
-### installazione via npm o yarn, caricamento dei css via sass ed import del js
+### installazione via npm o yarn, caricamento dei css via sass ed import del js opzionale
 [ita-button](https://github.com/isprambiente/ita-button) è disponibile anche come [modulo NPM](https://www.npmjs.com/package/ita-button/).
 Per installarlo tramite yard eseguire il comando `yarn add ita-button`, per installarlo tramite npm `npm install ita-button`.
 
@@ -71,7 +71,7 @@ E' possibile includere includere gli stili in sass con il seguente codice:
 @import 'ita-button/src/css/ita-font'
 ```
 
-E' possibile includere ed eseguire il modulo js con il seguente codice:
+E' possibile includere ed eseguire il modulo js per il caricamento remoto degli idp con il seguente codice:
 ```js
 import { Ita } from 'ita-button/ita'
 var ita = new Ita
@@ -127,7 +127,7 @@ L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe 
 * [SPID](./spid.md)
 
 ### Informazioni per il caricamento remoto degli idp 
-Il repository contiene [ita.js](src/js/ita.js) una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) di [spid-sp-button](https://github.com/italia/spid-sp-access-button). Lo script è stato adattato alla struttura di questa versione dei bottoni, è stato rinchiuso in un modulo importabile ed è stato reso completamente configurabile.
+Il repository contiene [ita.mjs](src/js/ita.mjs) una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) di [spid-sp-button](https://github.com/italia/spid-sp-access-button). Lo script è stato adattato alla struttura di questa versione dei bottoni, è stato rinchiuso in un modulo importabile ed è stato reso completamente configurabile.
 * [ita.mjs sorgente](src/js/ita.mjs)
 * [ita.mjs istruzioni e configurazione](./ita-mjs.md)
 
