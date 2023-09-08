@@ -1,6 +1,6 @@
 {
   "name": "ita-button",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "SPID, CIE, eIDAS, IDEM buttons with support for AGID dynamic SPID idps (circ. 41)",
   "type": "module",
   "module": "src/js/main.mjs",

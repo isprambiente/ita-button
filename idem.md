@@ -4,7 +4,7 @@
 <div class='ita'>
   <a class="ita-button" href="#">
     <img src="img/idem.svg" alt="IDEM Logo">
-    Entra con IDEM
+    <span class='ita-content'>Entra con IDEM</span>
   </a>
 </div>
 ```

@@ -1,11 +1,13 @@
 .ita
   // Configuration
+  $fonts: "Titillium Web", HelveticaNeue, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif
+  $gray: #dedede
   $ita-bg: #06c
   $light: #F0F0F0
-  $gray: #dedede
-  $radius: 0.375rem
   $margin: 0.5rem
-  $fonts: "Titillium Web", HelveticaNeue, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif
+  $radius: 0.375rem
+  $shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+  $white: #fff
 
   // Color modifiers
   // do stuff
@@ -40,15 +42,26 @@
   &.ita-mt
     margin-top: $margin
   &.ita-fixed .ita-button
-    width: 11em
+    width: 13em
+  &.ita-extended
+    display: block
+    .ita-button
+      width: 100%
+  &.ita-shadowed .ita-button
+    box-shadow: $shadow
+  &.ita-shadowed .ita-button:hover
+    box-shadow: none
 
   &:focus-within .ita-menu, & .ita-menu:hover
     display: block
 
   .ita-button
-    display: inline-block
+    display: flex
+    justify-content: center
+    align-items: center
     box-sizing: content-box
-    padding: 0em 0.75rem 0em 0.25em
+    padding: 0 0.25em
+    margin: 0
 
     border: none
     border-radius: $radius
@@ -57,8 +70,8 @@
     cursor: pointer
     
     font-family: $fonts
-    color: #fff
-    line-height: 2.5em
+    color: $white
+    line-height: 1.5em
     font-size: inherit
     text-decoration: none
  
@@ -66,11 +79,15 @@
       background: darken($ita-bg, 5%)
       
     img
-      float: left
-      padding: 0.25em 0.25em 0.25em 0em
-      margin-right: 0.25em
+      height: 2.5em
+      padding: 0.25em 0.25em 0.25em 0
       height: 2.25em
       border-right: rgba(255, 255, 255, 0.1) 0.1em solid
+
+    .ita-content
+      flex: 1 1 auto
+      text-align: center
+      padding: 0 0.25em
 
   .ita-menu
     box-sizing: content-box
@@ -78,10 +95,10 @@
     min-width: 12rem
     position: absolute
     z-index: 20
-    background: #fff
+    background: $white
     border: 1px solid $gray
     border-radius: $radius
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+    box-shadow: $shadow
 
     a
       display: block
@@ -97,14 +114,13 @@
 
   &.ita-dropdown 
     .ita-button::after
-      display: inline-block
-      margin-left: 0.255em
-      vertical-align: 0.255em
+      display: block
+      margin-left: 0.25em
       content: ""
       border-top: 0.3em solid
       border-right: 0.3em solid transparent
       border-bottom: 0
       border-left: 0.3em solid transparent
-    
+       
     &.ita-active .ita-menu
       display: block

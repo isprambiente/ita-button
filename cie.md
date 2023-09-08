@@ -4,7 +4,7 @@
 <div class='ita'>
   <a class="ita-button" href="#">
     <img src="img/cie.svg" alt="CIE Logo">
-    Entra con CIE
+    <span class='ita-content'>Entra con CIE</span>
   </a>
 </div>
 ```
