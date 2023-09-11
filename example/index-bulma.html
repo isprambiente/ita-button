@@ -77,80 +77,80 @@
 
     <div class='container'>
       <section class="hero is-primary">
-	<div class="hero-body">
-	  <p class="title">Autenticazione!</p>
-	  <p class="subtitle">
-	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus vulputate sem accumsan interdum. Aenean at malesuada massa. Phasellus nec justo tempor, euismod nulla eu, pharetra purus. Nullam euismod lacus pharetra leo dictum, nec maximus odio rutrum.<br/><br/>
-	    <a class='button is-info'>Learn more</a>
-	  </p>
-	</div>
+        <div class="hero-body">
+          <p class="title">Autenticazione!</p>
+          <p class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus vulputate sem accumsan interdum. Aenean at malesuada massa. Phasellus nec justo tempor, euismod nulla eu, pharetra purus. Nullam euismod lacus pharetra leo dictum, nec maximus odio rutrum.<br/><br/>
+            <a class='button is-info'>Learn more</a>
+          </p>
+        </div>
       </section>
       <br/>
       <div class='columns'>
-	<div class='column'>
-	  <div class='box content'>
+        <div class='column'>
+          <div class='box content'>
             <h3 class='is-size-3'>SPID</h3>
-	    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	    <div class='ita ita-dropdown ita-fixed'>
-	      <button class="ita-button">
-		<img src="../src/img/spid.svg" alt="SPID logo">
-		Entra con SPID
-	     </button>
-	     <div class='ita-menu' role='menu' data-spid-remote></div>
-	     </div>
-	  </div>
-	</div>
-	<div class='column'>
-	  <div class='box content'>
-	    <h3 class='is-size-3'>CIE</h3>
-	    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	    <div class='ita ita-fixed'>
-		<a class="ita-button" href="#">
-		  <img src="../src/img/cie.svg" alt="CIE Logo">
-		  Entra con CIE
-	       </a>
-	      </div>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <div class='ita ita-dropdown ita-extended'>
+              <button class="ita-button">
+                <img src="../src/img/spid.svg" alt="SPID logo">
+                  <span class='ita-content'>Entra con SPID</span>
+              </button>
+              <div class='ita-menu' role='menu' data-spid-remote></div>
+            </div>
+          </div>
+        </div>
+        <div class='column'>
+          <div class='box content'>
+            <h3 class='is-size-3'>CIE</h3>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <div class='ita ita-extended'>
+              <a class="ita-button" href="#">
+                <img src="../src/img/cie.svg" alt="CIE Logo">
+                  <span class='ita-content'>Entra con CIE</span>
+              </a>
+            </div>
 
-	  </div>
-	</div>
-	<div class='column'>
-	  <div class='box content'>
+          </div>
+        </div>
+        <div class='column'>
+          <div class='box content'>
             <h3 class='is-size-3'>eIDAS</h3>
-	    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	    <div class='ita ita-fixed'>
-		<a class="ita-button" href="#">
-		  <img src="../src/img/ficep.svg" alt="FICEP Logo">
-		  Entra con eIDAS
-	       </a>
-	      </div>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <div class='ita ita-extended'>
+              <a class="ita-button" href="#">
+                <img src="../src/img/ficep.svg" alt="FICEP Logo">
+                <span class='ita-content'>Entra con eIDAS</span>
+              </a>
+            </div>
 
-	  </div>
-	</div>
+          </div>
+        </div>
       </div>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
 
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
+      // Add a click event on each of them
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
 
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
 
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
 
-          });
         });
-
       });
-      var ita = new Ita
+
+    });
+    var ita = new Ita
     </script>
 
   </body>

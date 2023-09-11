@@ -1,4 +1,4 @@
-# [ita-button](https://github.com/isprambiente/ita-button)
+# [ita-button](https://github.com/isprambiente/ita-button) V2
 ![SPID CIE eIDAS IDEM](static/ita-buttons.png)
 
 Il progetto nasce dall'esigenza di poter utilizzare i bottoni per le autenticazioni SPID / CIE / eIDAS / IDEM ed eduGAIN con siti "non bootstrap 4' senza reinventare la ruota.
@@ -22,6 +22,14 @@ Il progetto non è AGID e non sostituisce il bottone ufficiale [spid-sp-access-b
 * Gestire tutte le classi opzionali di configurazione nel contenitore printipale;
 * Non vincolare le classi ad elementi specifici (es: a, button, span);
 * Sviluppare con usabilità ed accessibilità in testa.
+
+## Con la versione V2
+* Il bottone diventa flex per mantenere meglio proporzioni e rapporti con lo scalare dello schermo.
+* Nuova classe 'ita-extended' per occupare tutta la larghezza dello schermo
+* Nuova classe 'ita-shadowed' per aggiungere l'ombra al bottone e toglierla al passaggio del mouse (effetto pulsante)
+* Nuove configurazioni sass
+* Nuova classe 'ita-content' per rinchiudere il testo e mantenerlo al centro anche variando la larghezza del bottone.
+
 
 ## Pagine di esempio
 * [src/index.html](src/index.html) tutte le varianti di bottoni senza alcun framework css
@@ -88,7 +96,7 @@ Il contenitore principale può opzionalmente avere al suo interno un elemento `i
 <div class='ita'>
   <a class="ita-button" href="#">
     <img src="img/cie.svg" alt="CIE Logo">
-    Entra con CIE
+    <span class="ita-content">Entra con CIE</span>
   </a>
 </div>
 ```
@@ -96,8 +104,8 @@ Il contenitore principale può opzionalmente avere al suo interno un elemento `i
 ```html
     <div class='ita ita-dropdown'>
       <button class="ita-button">
-	<img src="img/spid.svg" alt="SPID logo">
-	Entra con SPID
+        <img src="img/spid.svg" alt="SPID logo">
+	    <span class="ita-content">Entra con SPID</span>
       </button>
       <div class='ita-menu' role='menu'>
         <a href="#"><img src="img/spid-idp-timid.svg" alt="TIM Trust Technologies srl"></a>
@@ -110,7 +118,9 @@ L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe 
 ```
 
 ### Classi opzionali
-* **ita-fixed** fissa la larghezza dei bottoni a 10.4em (lunghezza del bottone spid)
+* **ita-fixed** fissa la larghezza dei bottoni a 13em (lunghezza del bottone IT Wallet)
+* **ita-extended** estende il bottone alla dimensione del contenitore
+* **ita-shadowed** Aggiunge l'ombra al bottone
 * **ita-hover** rende il dropdown visibile al passaggio del mouse
 * **ita-l** Bottone ridimensionato con i font impostati a 1.5rem
 * **ita-xl** Bottone ridimensionato con i font impostati a 2rem
@@ -125,6 +135,7 @@ L'elemento `ita-menu` è nascosto (`display: hidden`) se il bottone o la classe 
 * [eIDAS](./eidas.md)
 * [IDEM](./idem.md)
 * [SPID](./spid.md)
+* [IT Wallet](./it_wallet.md)
 
 ### Informazioni per il caricamento remoto degli idp 
 Il repository contiene [ita.mjs](src/js/ita.mjs) una versione modificata del file [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js) di [spid-sp-button](https://github.com/italia/spid-sp-access-button). Lo script è stato adattato alla struttura di questa versione dei bottoni, è stato rinchiuso in un modulo importabile ed è stato reso completamente configurabile.
@@ -160,12 +171,14 @@ Per esempio popolando la cariabile con i seguenti valori si creeranno le classi 
 $colors: (orange: #d77e29, black: #000)
 ```
 Altre variabili configurabili sono:
-* $ita-bg: Background di default 
-* $light: background hover
-* $gray: Grigio utilizzato per i bordi
-* $radius: radius bordi dei bottoni
-* $margin: Margine di default
-* $fonts: font per i bottoni
+* **$fonts**: font da utilizzare nel bottone - default: Titillium Web
+* **$gray**: Grigio utilizzato per i bordi del dropdown - default: `#dedede`
+* **$ita-bg**: Background del bottone (se non indicate varianti) - default: `#06c`
+* **$light**: background link on hover per il dropdown - default: `#f0f0f0`
+* **$margin**: Margine utilizzato con le classi specifiche (ma, mb, mt) - default: 0.5rem
+* **$radius**: radius bordi dei bottoni - default: 0.375rem
+* **$shadow**: Ombra utilizzata per il bottone (se attiva la classe `ita-shadowed`) e per il dropdown
+* **$white**: colore utilizzato per il testo del bottone e come sfondo del dropdown 
 
 ## Crediti
 * il sistema di importazione degli IDPS è ripreso dal progetto [Satosa-Saml2SPID](https://github.com/italia/Satosa-Saml2Spid/) ed è aggiornato con il nuovo sistema definito da [spid-sp-button](https://github.com/italia/spid-sp-access-button) in [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js)
