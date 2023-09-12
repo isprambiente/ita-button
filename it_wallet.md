@@ -1,5 +1,5 @@
 # IT Wallet
-![CIE](static/cie.png)
+![CIE](static/it-wallet.png)
 ```html
 <div class='ita'>
   <a class="ita-button" href="#">

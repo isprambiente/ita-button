@@ -1,18 +1,18 @@
 # [ita-button](https://github.com/isprambiente/ita-button) V2
-![SPID CIE eIDAS IDEM](static/ita-buttons.png)
+![SPID CIE eIDAS IDEM](static/ita-buttons-v2.png)
 
 Il progetto nasce dall'esigenza di poter utilizzare i bottoni per le autenticazioni SPID / CIE / eIDAS / IDEM ed eduGAIN con siti "non bootstrap 4' senza reinventare la ruota.
 
 Il progetto non è AGID e non sostituisce il bottone ufficiale [spid-sp-access-button](https://github.com/italia/spid-sp-access-button), il progetto si prefige soltanto di provare ad ottenere un risultato simile con un codice più semplice e generico.
 
 ## Obiettivi
-* creare un set di bottoni indipendente da ogni framework css
-* creare uno standard unico compatibile con i vari bottoni (SPID / CIE / ecc.)
-* non richiedere js per il funzionamento del bottone
-* supportare l'inserimento statico delle voci di dropdown (idps SPID)
-* supportare l'inserimento dinamico delle voci di dropdown via js (idps SPID circ. 41)
-* creare un css il più  piccolo possibile
-* mantenere un elevato livello di coerenza indipendentemente dal framesowrk css utilizzato
+* creare un set di bottoni indipendente da ogni framework css;
+* creare uno standard unico compatibile con i vari bottoni (SPID / CIE / ecc.);
+* non richiedere js per il funzionamento del bottone;
+* supportare l'inserimento statico delle voci di dropdown (idps SPID);
+* supportare l'inserimento dinamico delle voci di dropdown via js (idps SPID circ. 41);
+* creare un css il più  piccolo possibile;
+* mantenere un elevato livello di coerenza indipendentemente dal framesowrk css utilizzato.
 
 ## Filosofia nella creazione del progetto
 * Utilizzare soltanto dimensioni relative (em o rem) per rendere i bottoni coerenti con il resto del sito;
@@ -24,10 +24,10 @@ Il progetto non è AGID e non sostituisce il bottone ufficiale [spid-sp-access-b
 * Sviluppare con usabilità ed accessibilità in testa.
 
 ## Con la versione V2
-* Il bottone diventa flex per mantenere meglio proporzioni e rapporti con lo scalare dello schermo.
-* Nuova classe 'ita-extended' per occupare tutta la larghezza dello schermo
-* Nuova classe 'ita-shadowed' per aggiungere l'ombra al bottone e toglierla al passaggio del mouse (effetto pulsante)
-* Nuove configurazioni sass
+* Il bottone diventa flex per mantenere meglio proporzioni e rapporti con lo scalare dello schermo;
+* Nuova classe 'ita-extended' per occupare tutta la larghezza del contenitore contenitore;
+* Nuova classe 'ita-shadowed' per aggiungere l'ombra al bottone e toglierla al passaggio del mouse (effetto pulsante);
+* Nuove configurazioni sass;
 * Nuova classe 'ita-content' per rinchiudere il testo e mantenerlo al centro anche variando la larghezza del bottone.
 
 
