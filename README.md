@@ -180,5 +180,11 @@ Altre variabili configurabili sono:
 * **$shadow**: Ombra utilizzata per il bottone (se attiva la classe `ita-shadowed`) e per il dropdown
 * **$white**: colore utilizzato per il testo del bottone e come sfondo del dropdown 
 
+## tip and tricks
+* Il contenitore principale `ita` non dove essere necessariamente un `div`, se inserite il bottone all'interno di un testo o di un paragrafo dovete utilizzare il tag `span`. Es: `<div class='ita'><a class="ita-button" href="#">...</a></span>
+* Per mantenere una buon livello di usabilità è necessario distanziare i bottoni fra di loro e dagli altri link, altrimenti risulterà complesso schiacciare il bottone giusto. Potete utilizzare la classe `ita-ma` per aggiungere un margine al bottone e distanziarlo dagli altri elementi. es: `<div class='ita ita-ma>...</div>`. In oltre avete a disposizione anche le classi `ita-mb` per aggiungere il margine soltanto in basso ed `ita-mt` per metterlo soltanto in alto.
+* Tutti i tag `img` devono avere l-attributo `alt` popolato, altrimenti l'immagine risulterà invisibile per tutte le persone che utilizzano un programma di lettura automatica. Es: `<img src="img/spid.svg" alt="SPID logo">`. Questa attenzione è indispensabile sia per l'usabilità che per l'accessibilità
+* Se aggiungete nuove immagini personalizzate verificate che il loro rapporto di altezza e larghezza sia 1:1, per mantenersi alliniate alle altre devono essere quadrate.
+
 ## Crediti
 * il sistema di importazione degli IDPS è ripreso dal progetto [Satosa-Saml2SPID](https://github.com/italia/Satosa-Saml2Spid/) ed è aggiornato con il nuovo sistema definito da [spid-sp-button](https://github.com/italia/spid-sp-access-button) in [spid-idps.js](https://github.com/italia/spid-sp-access-button/blob/master/src/production/js/spid-idps.js)
