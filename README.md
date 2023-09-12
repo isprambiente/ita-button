@@ -181,7 +181,7 @@ Altre variabili configurabili sono:
 * **$white**: colore utilizzato per il testo del bottone e come sfondo del dropdown 
 
 ## tip and tricks
-* Il contenitore principale `ita` non dove essere necessariamente un `div`, se inserite il bottone all'interno di un testo o di un paragrafo dovete utilizzare il tag `span`. Es: `<div class='ita'><a class="ita-button" href="#">...</a></span>
+* Il contenitore principale `ita` non dove essere necessariamente un `div`, se inserite il bottone all'interno di un testo o di un paragrafo dovete utilizzare il tag `span`. Es: `<div class='ita'><a class="ita-button" href="#">...</a></span>`
 * Per mantenere una buon livello di usabilità è necessario distanziare i bottoni fra di loro e dagli altri link, altrimenti risulterà complesso schiacciare il bottone giusto. Potete utilizzare la classe `ita-ma` per aggiungere un margine al bottone e distanziarlo dagli altri elementi. es: `<div class='ita ita-ma>...</div>`. In oltre avete a disposizione anche le classi `ita-mb` per aggiungere il margine soltanto in basso ed `ita-mt` per metterlo soltanto in alto.
 * Tutti i tag `img` devono avere l-attributo `alt` popolato, altrimenti l'immagine risulterà invisibile per tutte le persone che utilizzano un programma di lettura automatica. Es: `<img src="img/spid.svg" alt="SPID logo">`. Questa attenzione è indispensabile sia per l'usabilità che per l'accessibilità
 * Se aggiungete nuove immagini personalizzate verificate che il loro rapporto di altezza e larghezza sia 1:1, per mantenersi alliniate alle altre devono essere quadrate.
